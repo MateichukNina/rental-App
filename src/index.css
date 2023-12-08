@@ -13,3 +13,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.car-cards{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки рівної ширини */
+  grid-gap: 16px; /* Відступ між карточками */
+}
+
+.car-card {
+  width: 100%; /* Кожна карточка займає 100% ширини колонки */
+
+}
+
+.app-container {
+  display: flex;
+  max-width: 1200px; /* Максимальна ширина контейнера */
+  margin: 0 auto; /* Центрування по горизонталі */
+}
