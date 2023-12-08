@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/rental-App/static/css/main.7acaea2f.css",
-    "main.js": "/rental-App/static/js/main.e2440bdf.js",
+    "main.css": "/rental-App/static/css/main.701754a5.css",
+    "main.js": "/rental-App/static/js/main.5093059e.js",
     "index.html": "/rental-App/index.html",
-    "main.7acaea2f.css.map": "/rental-App/static/css/main.7acaea2f.css.map",
-    "main.e2440bdf.js.map": "/rental-App/static/js/main.e2440bdf.js.map"
+    "main.701754a5.css.map": "/rental-App/static/css/main.701754a5.css.map",
+    "main.5093059e.js.map": "/rental-App/static/js/main.5093059e.js.map"
   },
   "entrypoints": [
-    "static/css/main.7acaea2f.css",
-    "static/js/main.e2440bdf.js"
+    "static/css/main.701754a5.css",
+    "static/js/main.5093059e.js"
   ]
 }
