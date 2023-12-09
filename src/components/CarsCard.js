@@ -10,7 +10,7 @@ export const CarCard = ({ car }) => {
   return (
     <div className="car-card">
       <li>
-        <img src={car.img} alt={`${car.make} ${car.model}`} />
+        <img src={car.img} alt={`${car.make} ${car.model}`} class="my-image"/>
         {car.make} {new Date(car.year).getFullYear()}
         <p>{car.address}</p>
         <button type="button" onClick={openModal}>
