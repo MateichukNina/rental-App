@@ -28,8 +28,8 @@ export const CarList = () => {
     <div className="card-container">
       {cars.length > 0 ? (
         <div className="car-cards">
-          {cars.map((car) => (
-            <CarCard key={car.id} car={car} />
+          {cars.map((car) => ( 
+            <CarCard key={`car-${car.id}`} car={car} />
           ))}
         </div>
       ) : (

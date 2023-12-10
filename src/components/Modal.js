@@ -9,12 +9,14 @@ export const Modal = ({ car, onClose }) => {
           &#x2715;
         </button>
         <h2>{car.make} {car.model}</h2>
+        <li key={car.id}>
         <img src={car.img} alt={`${car.make} ${car.model}`} class="my-image" />
         <p>Year: {new Date(car.year).getFullYear()}</p>
         <p>Address: {car.address}</p>
-        {/* Додайте інші дані авто */}
+       
 
         <button>Rental Car</button>
+        </li>
       </div>
     </div>,
     document.getElementById('modal-root')

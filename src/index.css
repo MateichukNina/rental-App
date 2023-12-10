@@ -14,6 +14,15 @@ code {
     monospace;
 }
 
+.card-container{
+  padding-bottom: 100px;
+  max-width: 1280px;
+  min-height: calc(100vh - 308px);
+  padding: 0 16px; /* Якщо вам потрібні однакові зовнішні відступи з обох сторін */
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .car-cards{
   display: grid;
   grid-template-columns: repeat(4, 1fr); 
@@ -21,14 +30,19 @@ code {
 }
 
 .car-card {
-  width: 100%; 
+  max-width: 300px; /* Наприклад, обмежте ширину кожної картки до 300 пікселів */
+  margin: 10px; 
 
 }
 
 .app-container {
-  display: flex;
-  max-width: 1200px; 
-  margin: 0 auto; 
+  padding-bottom: 100px;
+  max-width: 1280px;
+  min-height: calc(100vh - 308px);
+  padding: 0 16px; /* Якщо вам потрібні однакові зовнішні відступи з обох сторін */
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 
@@ -72,8 +86,8 @@ code {
 }
 
 .my-image {
-  width: 461px; 
-  height: 248px; 
+  /* width: 461px; 
+  height: 248px;  */
   margin-left: auto;
   margin-right: auto;
   border-radius: 14px; 
