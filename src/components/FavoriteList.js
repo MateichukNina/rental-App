@@ -1,9 +1,9 @@
 import { useSelector } from "react-redux";
 import { CarCard } from "./CarsCard";
-import { favoriteCars } from "../Redux/selectors";
+import favoriteCar from '../Redux/selectors';
 
 export const FavoriteList = () =>{
-  const favoriteCars = useSelector(favoriteCars);
+  const favoriteCars = useSelector(favoriteCar);
 
   return(
     <div>

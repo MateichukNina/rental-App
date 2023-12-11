@@ -1,13 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-//  import { favoriteCar } from "Redux/selectors.js";
-import { addFavorite, removeFavorite } from "Redux/favorites/favoriteSlice"
+import React, { useState} from 'react';
+import { useDispatch} from 'react-redux';
+
+import { addFavorite, removeFavorite } from '../Redux/favorites/favoriteSlice';
 import { Modal } from './Modal';
-import favoriteSlice from 'Redux/favorites/favoriteSlice';
+
 
 export const CarCard = ({ car }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  // const favoriteCars = useSelector(favoriteCar);
+  
   const [isFavorite, setIsFavorite] = useState(false);
 
   const dispatch = useDispatch();
@@ -25,10 +25,6 @@ export const CarCard = ({ car }) => {
       setIsFavorite(false);
     }
   };
-
-  if (!car) {
-    return null; // Почекайте, поки дані будуть завантажені
-  }
 
   return (
     <div className="car-card">

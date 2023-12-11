@@ -1,8 +1,19 @@
 import React  from 'react';
-// import CarsCard from './CarsCard';
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { CarList } from 'components/CarList';
+import { getCars } from 'Redux/cars/operations';
+import { selectIsLoading } from 'Redux/selectors';
 
 export const Catalog = ({ cars }) => {
+  const dispatch = useDispatch();
+  const isLoading = useSelector(selectIsLoading);
+
+  useEffect(() => {
+      dispatch(getCars())
+      
+  }, [dispatch])
+
   // const [filters, setFilters] = useState({
   //   make: '',
   //   maxHourlyPrice: null,
@@ -25,26 +36,6 @@ export const Catalog = ({ cars }) => {
 
   return (
     <div>
-         {/* <h2>Car Catalog</h2>
-      <form>
-        <label>
-          Make:
-          <input type="text" name="make" value={filters.make} onChange={handleFilterChange} />
-        </label>
-        <label>
-          Max Hourly Price:
-          <input type="number" name="maxHourlyPrice" value={filters.maxHourlyPrice || ''} onChange={handleFilterChange} />
-        </label>
-        <label>
-          Max Mileage:
-          <input type="number" name="maxMileage" value={filters.maxMileage || ''} onChange={handleFilterChange} />
-        </label>
-        <button type="submit">Apply Filters</button>
-      </form>
-
-      {filteredCars.map((car) => (
-        <CarsCard key={car.id} car={car} />
-      ))} */}
       <CarList/>
     </div>
   );
