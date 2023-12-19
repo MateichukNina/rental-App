@@ -27,7 +27,7 @@ export const CarCard = ({ car }) => {
   };
 
   return (
-    <div className="car-card">
+    <ul className="car-card">
       <li key={car.id}>
         <button type='button' onClick={handleAddFavorite}>Like</button>
         <img src={car.img} alt={`${car.make} ${car.model}`} class="my-image"/>
@@ -39,6 +39,6 @@ export const CarCard = ({ car }) => {
       </li>
 
       {isModalOpen && <Modal car={car} onClose={closeModal} />}
-    </div>
+    </ul>
   );
 };

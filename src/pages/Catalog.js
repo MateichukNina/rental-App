@@ -2,17 +2,19 @@ import React  from 'react';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { CarList } from 'components/CarList';
-import { getCars } from 'Redux/cars/operations';
-import { selectIsLoading } from 'Redux/selectors';
+import { getCars } from '../Redux/cars/operations';
+import { selectIsLoading, selectCurrentPage } from '../Redux/selectors';
 
-export const Catalog = ({ cars }) => {
+
+export const Catalog = () => {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
+  const page = useSelector(selectCurrentPage)
 
   useEffect(() => {
       dispatch(getCars())
       
-  }, [dispatch])
+  }, [dispatch, page])
 
   // const [filters, setFilters] = useState({
   //   make: '',
@@ -36,6 +38,8 @@ export const Catalog = ({ cars }) => {
 
   return (
     <div>
+      
+         {isLoading && <p>Loading...</p>}
       <CarList/>
     </div>
   );

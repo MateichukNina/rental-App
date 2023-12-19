@@ -7,15 +7,15 @@ export const Layout = () => {
   return (
     <div>
       <nav>
-        <ul>
+        <ul className='nav'>
           <li>
-            <Link to="/">Home</Link>
+            <Link className='link' to="/">Home</Link>
           </li>
           <li>
-            <Link to="/catalog">Catalog</Link>
+            <Link className='link' to="/catalog">Catalog</Link>
           </li>
           <li>
-            <Link to="/favorites">Favorites</Link>
+            <Link className='link' to="/favorites">Favorites</Link>
           </li>
         </ul>
       </nav>

@@ -14,37 +14,37 @@ code {
     monospace;
 }
 
-.card-container{
-  padding-bottom: 100px;
-  max-width: 1280px;
+li {
+  list-style: none;
+}
+
+.card-container {
+  /* padding-bottom: 100px;
+  max-width: 1200px;
   min-height: calc(100vh - 308px);
-  padding: 0 16px; /* Якщо вам потрібні однакові зовнішні відступи з обох сторін */
+  padding: 0 16px;  */
   margin-left: auto;
   margin-right: auto;
 }
 
-.car-cards{
-  display: grid;
-  grid-template-columns: repeat(4, 1fr); 
-  grid-gap: 16px; 
+.car-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px 29px;
 }
 
 .car-card {
-  max-width: 300px; /* Наприклад, обмежте ширину кожної картки до 300 пікселів */
-  margin: 10px; 
-
+  flex-basis: 274px;
 }
 
 .app-container {
   padding-bottom: 100px;
-  max-width: 1280px;
-  min-height: calc(100vh - 308px);
-  padding: 0 16px; /* Якщо вам потрібні однакові зовнішні відступи з обох сторін */
+  max-width: 1200px;
+
   margin-left: auto;
   margin-right: auto;
-  
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -56,8 +56,6 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  
- 
 }
 
 .modal-content {
@@ -68,7 +66,7 @@ code {
   width: 541px;
   height: 752px;
   overflow-y: auto;
-  max-height: 80vh; 
+  max-height: 80vh;
   margin-left: auto;
   margin-right: auto;
 }
@@ -86,14 +84,33 @@ code {
 }
 
 .my-image {
-  /* width: 461px; 
-  height: 248px;  */
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 14px; 
-  
+  /* display: flex;
+flex-basis: 250px; */
+
 }
 
 body.modal-open {
   overflow: hidden;
 }
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 12px;
+}
+
+ .select-search{
+  display: flex;
+  gap: 16px;
+} 

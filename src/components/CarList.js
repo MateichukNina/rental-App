@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 // import { Link } from "react-router-dom";
 import { getCar } from 'API';
 import { CarCard } from './CarsCard';
+import { Search } from './Filter';
 
 export const CarList = () => {
   const [cars, setCars] = useState([]);
@@ -26,6 +27,7 @@ export const CarList = () => {
 
   return (
     <div className="card-container">
+      <Search/>
       {cars.length > 0 ? (
         <div className="car-cards">
           {cars.map((car) => ( 
